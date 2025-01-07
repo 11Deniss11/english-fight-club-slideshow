@@ -1,0 +1,174 @@
+[gd_scene load_steps=24 format=3 uid="uid://iv30rcmcdyjm"]
+
+[ext_resource type="Script" path="res://wiesler.gd" id="1_7l006"]
+[ext_resource type="Texture2D" uid="uid://ct86bew7c7xmf" path="res://weislerDefaultAnim/weislerDefault0.png" id="2_2k0kd"]
+[ext_resource type="Texture2D" uid="uid://cqhaplmjgqgc7" path="res://weislerSitting.png" id="2_b7lji"]
+[ext_resource type="Texture2D" uid="uid://baoc0i5u63bbf" path="res://weislerDefaultAnim/weislerDefault1.png" id="3_nq0f8"]
+[ext_resource type="Texture2D" uid="uid://cyiuiq17m28gf" path="res://weislerIdleDraftAnim/pixil-frame-12 (2).png" id="3_ubpff"]
+[ext_resource type="Texture2D" uid="uid://cpwpgwpu10oe1" path="res://weislerDraftWalk/pixil-frame-5 (1).png" id="3_unh57"]
+[ext_resource type="Texture2D" uid="uid://br0lc5kevi7s2" path="res://weisler_dance.png" id="3_vib5t"]
+[ext_resource type="Texture2D" uid="uid://ctfgsalqyrxkh" path="res://weislerDraftWalk/pixil-frame-2 (5).png" id="4_4urio"]
+[ext_resource type="Texture2D" uid="uid://c3kj0bxkbpyno" path="res://weislerCryAnim/pixil-frame-6.png" id="4_gmcs7"]
+[ext_resource type="Texture2D" uid="uid://b5lmiahnvsjln" path="res://weislerIdleDraftAnim/pixil-frame-13 (2).png" id="4_yl7xt"]
+[ext_resource type="Texture2D" uid="uid://dbu064gsttgtm" path="res://weislerCryAnim/pixil-frame-7.png" id="5_pguo4"]
+[ext_resource type="Texture2D" uid="uid://b38njqlt6pi83" path="res://weislerDraftWalk/pixil-frame-3 (5).png" id="5_pol4p"]
+[ext_resource type="Texture2D" uid="uid://bqcgcxgyymo8t" path="res://weislerDraftWalk/pixil-frame-4 (3).png" id="6_710pk"]
+[ext_resource type="Texture2D" uid="uid://c8g8un273jv3q" path="res://weislerCryAnim/pixil-frame-8.png" id="6_muhsn"]
+[ext_resource type="Texture2D" uid="uid://b11euqgp7j5ba" path="res://weislerCryAnim/pixil-frame-9.png" id="7_x5uaf"]
+[ext_resource type="Texture2D" uid="uid://jyeuavftukn0" path="res://weislerCryAnim/pixil-frame-10.png" id="8_an4jk"]
+[ext_resource type="Texture2D" uid="uid://c3s8kp68n0gls" path="res://weislerFallBack.png" id="9_hrf4s"]
+[ext_resource type="Texture2D" uid="uid://2itis5t1tw4v" path="res://weislerWalkAnim/weislerWalk0.png" id="10_wvb1n"]
+[ext_resource type="Texture2D" uid="uid://dxnnxp4f5robh" path="res://weislerWalkAnim/weislerWalk1.png" id="11_nrjh8"]
+[ext_resource type="Texture2D" uid="uid://03ir3ogs8wuy" path="res://weislerWalkAnim/weislerWalk2.png" id="12_u5fw5"]
+[ext_resource type="Texture2D" uid="uid://bu6sy3sy1k4xe" path="res://weislerWalkAnim/weislerWalk3.png" id="13_po4ax"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_85sxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b7lji")
+}],
+"loop": true,
+"name": &"chair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vib5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vib5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vib5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vib5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vib5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vib5t")
+}],
+"loop": true,
+"name": &"dance",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ubpff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yl7xt")
+}],
+"loop": true,
+"name": &"draftIdle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_unh57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4urio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pol4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_710pk")
+}],
+"loop": true,
+"name": &"draftWalk",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gmcs7")
+}],
+"loop": true,
+"name": &"headphones",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gmcs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pguo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_muhsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x5uaf")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_an4jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_an4jk")
+}],
+"loop": true,
+"name": &"headphonesCry",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2k0kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nq0f8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hrf4s")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_wvb1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nrjh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_u5fw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_po4ax")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sbdxx"]
+radius = 53.0
+height = 142.0
+
+[node name="Wiesler" type="Area2D"]
+script = ExtResource("1_7l006")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_85sxs")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 14)
+shape = SubResource("CapsuleShape2D_sbdxx")
+
+[node name="KnockedBackTimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="timeout" from="KnockedBackTimer" to="." method="_on_knocked_back_timeout"]

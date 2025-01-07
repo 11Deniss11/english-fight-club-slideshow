@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs5gowp66jt5f"]
+
+[ext_resource type="Texture2D" uid="uid://dos6c3k57qwhd" path="res://truckDriveAnim/pixil-frame-13 (1).png" id="1_erlg1"]
+[ext_resource type="Texture2D" uid="uid://b56jh27b25ti0" path="res://truckDriveAnim/pixil-frame-12 (1).png" id="2_6ajmi"]
+[ext_resource type="Script" path="res://truck.gd" id="3_u58px"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63214"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_erlg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ajmi")
+}],
+"loop": true,
+"name": &"drive",
+"speed": 10.0
+}]
+
+[node name="truck" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_63214")
+animation = &"drive"
+script = ExtResource("3_u58px")
+
+[node name="stop_timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="soldier_move_timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="soldier_move_timer_2" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="stop_timer" to="." method="_on_stop_timer_timeout"]
+[connection signal="timeout" from="soldier_move_timer" to="." method="_on_soldier_move_timer_timeout"]
+[connection signal="timeout" from="soldier_move_timer_2" to="." method="_on_soldier_move_timer_2_timeout"]

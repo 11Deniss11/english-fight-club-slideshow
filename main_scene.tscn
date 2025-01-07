@@ -1,0 +1,108 @@
+[gd_scene load_steps=17 format=3 uid="uid://boxsw8tym31mo"]
+
+[ext_resource type="Script" path="res://manager.gd" id="1_w5vkt"]
+[ext_resource type="PackedScene" uid="uid://iv30rcmcdyjm" path="res://wiesler.tscn" id="2_14adh"]
+[ext_resource type="PackedScene" uid="uid://dovsac4bjjadx" path="res://background.tscn" id="3_n3caj"]
+[ext_resource type="PackedScene" uid="uid://bxul3w5n12o6v" path="res://weisler_health_bar.tscn" id="4_nh4c5"]
+[ext_resource type="PackedScene" uid="uid://dmb5ivrofrcnx" path="res://obrien_health_bar.tscn" id="5_owjb4"]
+[ext_resource type="PackedScene" uid="uid://dub42a667hdkg" path="res://obrien.tscn" id="6_dr58r"]
+[ext_resource type="Texture2D" uid="uid://cvrf21rbeafkj" path="res://table (2).png" id="7_cpfhh"]
+[ext_resource type="Script" path="res://table.gd" id="8_yx6ng"]
+[ext_resource type="PackedScene" uid="uid://cs5gowp66jt5f" path="res://truck.tscn" id="9_8g270"]
+[ext_resource type="PackedScene" uid="uid://dap07haqj818a" path="res://ussr_soldier.tscn" id="10_yv1i0"]
+[ext_resource type="Texture2D" uid="uid://bbwqaegudqp8c" path="res://vietnamAnim/pixil-frame-0 (6).png" id="11_xy2jf"]
+[ext_resource type="Texture2D" uid="uid://chj050w67ln5y" path="res://vietnamAnim/pixil-frame-0 (7).png" id="12_0au3m"]
+[ext_resource type="Texture2D" uid="uid://ce11wqplj015l" path="res://vietnamAnim/pixil-frame-0 (8).png" id="13_uxo4a"]
+[ext_resource type="Texture2D" uid="uid://bsl3lmvx5mqnh" path="res://vietnamAnim/pixil-frame-0 (9).png" id="14_36do3"]
+[ext_resource type="PackedScene" uid="uid://cfr4kxwc17nrw" path="res://boom.tscn" id="15_8iwnu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_420mo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_xy2jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0au3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uxo4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_36do3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="main_scene" type="Node2D"]
+script = ExtResource("1_w5vkt")
+
+[node name="weisler" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("2_14adh")]
+position = Vector2(400, 850)
+scale = Vector2(2, 2)
+Target = NodePath("../weisler_target")
+
+[node name="berlin_background" parent="." instance=ExtResource("3_n3caj")]
+visible = false
+z_index = -5
+
+[node name="weisler_health_bar" parent="." instance=ExtResource("4_nh4c5")]
+scale = Vector2(0.75, 0.75)
+frame = 0
+frame_progress = 0.0
+offset = Vector2(499.5, 120)
+
+[node name="obrien_health_bar" parent="." instance=ExtResource("5_owjb4")]
+scale = Vector2(0.75, 0.75)
+offset = Vector2(2060, 120)
+
+[node name="weisler_target" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(400, 850)
+
+[node name="obrien_target" type="Node2D" parent="."]
+position = Vector2(1520, 850)
+
+[node name="table" type="Sprite2D" parent="." node_paths=PackedStringArray("Target")]
+position = Vector2(960, 1100)
+texture = ExtResource("7_cpfhh")
+script = ExtResource("8_yx6ng")
+speed = 800
+Target = NodePath("../table_target")
+
+[node name="table_target" type="Node2D" parent="."]
+position = Vector2(960, 1100)
+
+[node name="truck" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("9_8g270")]
+z_index = -2
+position = Vector2(-377, 807)
+Target = NodePath("../truck_target")
+
+[node name="truck_target" type="Node2D" parent="."]
+position = Vector2(-377, 807)
+
+[node name="ussr_soldier" parent="." instance=ExtResource("10_yv1i0")]
+visible = false
+position = Vector2(1414, 848)
+scale = Vector2(0.8, 0.8)
+
+[node name="ussr_soldier2" parent="." instance=ExtResource("10_yv1i0")]
+visible = false
+z_index = -1
+position = Vector2(1635, 848)
+scale = Vector2(0.8, 0.8)
+
+[node name="vietnam_background" type="AnimatedSprite2D" parent="."]
+z_index = -5
+sprite_frames = SubResource("SpriteFrames_420mo")
+frame_progress = 0.89906
+offset = Vector2(960, 540)
+
+[node name="obrien" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("6_dr58r")]
+position = Vector2(1520, 850)
+scale = Vector2(0.95, 0.95)
+Target = NodePath("../obrien_target")
+
+[node name="boom" parent="." instance=ExtResource("15_8iwnu")]

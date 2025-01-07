@@ -1,0 +1,163 @@
+[gd_scene load_steps=25 format=3 uid="uid://dub42a667hdkg"]
+
+[ext_resource type="Script" path="res://obrien.gd" id="1_raeli"]
+[ext_resource type="Texture2D" uid="uid://dkm0r64bqu8sm" path="res://obrienDefaultAnim/pixil-frame-0 (5).png" id="2_y8a86"]
+[ext_resource type="Texture2D" uid="uid://dd0afdeb7rc06" path="res://obrienCryAnim/pixil-frame-0 (12).png" id="3_f52ce"]
+[ext_resource type="Texture2D" uid="uid://gl4r7rd7tgvp" path="res://obrienDefaultAnim/pixil-frame-1 (5).png" id="3_tk8nk"]
+[ext_resource type="Texture2D" uid="uid://bpposubkqdq4b" path="res://obrienCryAnim/pixil-frame-1 (9).png" id="4_32xgx"]
+[ext_resource type="Texture2D" uid="uid://bxjlkaafe88su" path="res://obrienFallBack.png" id="4_b51pi"]
+[ext_resource type="Texture2D" uid="uid://c4544c8xk6ain" path="res://obrienWalkAnim/pixil-frame-5.png" id="4_tf468"]
+[ext_resource type="Texture2D" uid="uid://dn57uqsg7cuqd" path="res://obrienSitting.png" id="5_3mmgd"]
+[ext_resource type="Texture2D" uid="uid://bxqibi115keqi" path="res://obrienWalkAnim/pixil-frame-2 (3).png" id="5_018s2"]
+[ext_resource type="Texture2D" uid="uid://ddcbli677n5j1" path="res://obrienCryAnim/pixil-frame-2 (6).png" id="5_r5nks"]
+[ext_resource type="Texture2D" uid="uid://doxvqpmhwwi0e" path="res://obrienCryAnim/pixil-frame-3 (6).png" id="6_fa88p"]
+[ext_resource type="Texture2D" uid="uid://c0jb3pja735pm" path="res://obrienWalkAnim/pixil-frame-3 (3).png" id="6_qk3nw"]
+[ext_resource type="Texture2D" uid="uid://balf7emv1vcdu" path="res://obrienCryAnim/pixil-frame-4 (4).png" id="7_47165"]
+[ext_resource type="Texture2D" uid="uid://de7iq5ecmr080" path="res://obrienWalkAnim/pixil-frame-4 (1).png" id="7_grag0"]
+[ext_resource type="Texture2D" uid="uid://dfucep1fvf5qv" path="res://obrienCryAnim/pixil-frame-5 (2).png" id="8_fsoti"]
+[ext_resource type="Texture2D" uid="uid://dkx3b3j7hysty" path="res://obrienThrowAnim/pixil-frame-0 (13).png" id="9_rwvou"]
+[ext_resource type="Texture2D" uid="uid://44irt5kmx1dk" path="res://obrienWaterAnim/pixil-frame-1 (7).png" id="10_3osto"]
+[ext_resource type="Texture2D" uid="uid://baqsfskmoq85o" path="res://obrienThrowAnim/pixil-frame-1 (10).png" id="10_okfy4"]
+[ext_resource type="Texture2D" uid="uid://bpp8kwr3dvgc3" path="res://obrienWaterAnim/pixil-frame-0 (10).png" id="11_7wk82"]
+[ext_resource type="Texture2D" uid="uid://bkmleds30qe18" path="res://obrienThrowAnim/pixil-frame-2 (7).png" id="14_d1xj0"]
+[ext_resource type="Texture2D" uid="uid://bc34q7m3ph3ff" path="res://obrienThrowAnim/pixil-frame-3 (7).png" id="15_gmo7i"]
+[ext_resource type="Texture2D" uid="uid://bweo37gs23xgb" path="res://obrienThrowAnim/pixil-frame-4 (5).png" id="16_5pj70"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h05p6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_3mmgd")
+}],
+"loop": true,
+"name": &"chair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f52ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_32xgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r5nks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fa88p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_47165")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_fsoti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fsoti")
+}],
+"loop": true,
+"name": &"cry",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rwvou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_okfy4")
+}],
+"loop": true,
+"name": &"grenadeIdle",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y8a86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tk8nk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b51pi")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rwvou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_okfy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d1xj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gmo7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5pj70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5pj70")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tf468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_018s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qk3nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_grag0")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_3osto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7wk82")
+}],
+"loop": true,
+"name": &"water",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ikda"]
+radius = 117.0
+height = 340.0
+
+[node name="obrien" type="Area2D"]
+script = ExtResource("1_raeli")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h05p6")
+animation = &"throw"
+frame_progress = 0.0240007
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 42)
+shape = SubResource("CapsuleShape2D_6ikda")
+
+[node name="KnockedBackTimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="timeout" from="KnockedBackTimer" to="." method="_on_knocked_back_timeout"]
