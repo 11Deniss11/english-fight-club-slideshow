@@ -3,4 +3,4 @@ My first project in Godot!
 
 Works kind of like a slideshow, press space to go to next "slide"
 
-Attacks are references to texts read in class
+The attacks are references to texts read in class
